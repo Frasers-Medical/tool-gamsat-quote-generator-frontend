@@ -1,0 +1,28 @@
+@import "../../Styles/main.scss";
+
+.header {
+  background-color: $color-bg-light;
+  text-align: center;
+
+  &__title {
+    font-size: calc(min(9vw, 4rem));
+    margin-bottom: $spacer-large;
+  }
+}
+
+.navigation {
+  text-align: left;
+  margin: 0 auto;
+
+  &__back-button {
+    @include button($color-green);
+
+    display: inline-block;
+    color: $color-text-light;
+    padding: 0.25rem 0.5rem 0rem 0.5rem;
+
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+}
