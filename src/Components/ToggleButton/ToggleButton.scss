@@ -1,0 +1,52 @@
+@import "../../Styles/main.scss";
+
+$toggle-height: 2.5rem;
+$toggle-width: 7.5rem;
+
+.toggle {
+  @include unselectable;
+
+  position: relative;
+  height: $toggle-height;
+  width: $toggle-width;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &__label {
+    display: block;
+    text-align: center;
+    font-size: $default-2;
+    margin-bottom: 0.5rem;
+  }
+
+  &__bg {
+    @include center-div-absolute;
+
+    background-color: $color-disabled;
+    width: 70%;
+    height: 70%;
+    border-radius: $round-edges;
+    transition: all 0.3s ease;
+
+    &--active {
+      background-color: $color-dark-blue;
+    }
+  }
+
+  &__circle {
+    height: $toggle-height;
+    width: $toggle-height;
+    border-radius: $round-edges;
+    position: absolute;
+    left: 0;
+    transform: translate(30%);
+    background-color: darken($color-disabled, 20%);
+    transition: all 0.35s cubic-bezier(0.57, 1, 0.61, 1.4);
+
+    &--active {
+      left: 100%;
+      transform: translate(-130%);
+      background-color: $color-green;
+    }
+  }
+}
