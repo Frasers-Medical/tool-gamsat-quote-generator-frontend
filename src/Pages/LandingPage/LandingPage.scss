@@ -1,0 +1,30 @@
+@import "../../Styles/main.scss";
+
+.landing-section {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: $color-bg-light;
+}
+
+.description {
+  font-size: 1.7rem;
+  margin: 0 auto;
+  margin-bottom: $spacer-med;
+  text-align: center;
+}
+
+.toggle-button {
+  &__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    margin-bottom: $spacer-med;
+  }
+
+  &__button {
+    margin: 0 2rem;
+  }
+}
