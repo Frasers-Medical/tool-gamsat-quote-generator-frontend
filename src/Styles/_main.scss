@@ -1,0 +1,128 @@
+$color-white: #fff;
+$color-black: #000;
+
+$color-text-dark: #393D44;
+$color-text-light: #fff;
+
+// Background
+$color-bg-light: #FFF9F0;
+$color-bg-dark: #FFE5C5;
+
+// Primary Colors
+$color-light-blue: #E0FFFB;
+$color-dark-blue: #07455F;
+$color-green: #00D1CB;
+
+// Utilties
+$color-disabled: #7e8381;
+
+// Animations
+@keyframes fade-out-in {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// mixins
+
+@mixin center-div-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin unselectable {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+@mixin centered-container {
+  width: calc(min(100%, 35rem));
+  margin: 0 auto;
+}
+
+@mixin button($base-color) {
+  @include unselectable;
+
+  background-color: $base-color;
+  border-radius: 100rem;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.25s ease-out;
+
+  &:hover {
+    background-color: darken($color: $base-color, $amount: 10%);
+    box-shadow: 0 0.2rem 0.5rem rgba(black, 0.3);
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+// themes
+
+// Typgraphy
+$heading-1: 5rem;
+$heading-2: 4rem;
+$heading-3: 3rem;
+$heading-4: 2rem;
+$heading-5: 1rem;
+
+$default-1: 2.5rem;
+$default-2: 2rem;
+$default-3: 1.5rem;
+$default-4: 1rem;
+
+// Spacing
+$spacer-large: 3.5rem;
+$spacer-med: 2.5rem;
+$spacer-small: 1.5rem;
+
+// Padding
+$padding-button: 0.75rem 1.5rem;
+$padding: 2rem 3rem;
+
+$spacer: 3rem;
+$round-edges: 2000px;
+
+// Shadow
+$box-shadow-light: 0 1.5rem 1rem rgba(black, 0.1);
+$box-shadow-med: 0 1.5rem 2rem rgba(black, 0.3);
+$box-shadow-dark: 0 1.5rem 4rem rgba(black, 0.5);
+
+// Mobile
+$mobile-width: 600px;
