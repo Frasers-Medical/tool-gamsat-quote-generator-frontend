@@ -1,0 +1,86 @@
+[
+  {
+    "task_a_theme": "Technology",
+    "task_b_theme": "Beauty",
+    "year": 2005,
+    "month": "March"
+  },
+  {
+    "task_a_theme": "Food",
+    "task_b_theme": "Healing",
+    "year": 2006,
+    "month": "March"
+  },
+  {
+    "task_a_theme": "Reflection",
+    "task_b_theme": "Knowledge",
+    "year": 2008,
+    "month": "March"
+  },
+  {
+    "task_a_theme": "Equality",
+    "task_b_theme": "Happiness",
+    "year": 2011,
+    "month": "March"
+  },
+  {
+    "task_a_theme": "Space",
+    "task_b_theme": "Humour",
+    "year": 2011,
+    "month": "September"
+  },
+  {
+    "task_a_theme": "Freedom",
+    "task_b_theme": "Love",
+    "year": 2012,
+    "month": "March"
+  },
+  {
+    "task_a_theme": "Technology",
+    "task_b_theme": "Dreams",
+    "year": 2012,
+    "month": "September"
+  },
+  {
+    "task_a_theme": "Meritocracy",
+    "task_b_theme": "Marriage",
+    "year": 2013,
+    "month": "March"
+  },
+  {
+    "task_a_theme": "Multiculturalism",
+    "task_b_theme": "Money",
+    "year": 2014,
+    "month": "March"
+  },
+  {
+    "task_a_theme": "Government",
+    "task_b_theme": "Identity",
+    "year": 2015,
+    "month": "September"
+  },
+  {
+    "task_a_theme": "Justice",
+    "task_b_theme": "Idealism",
+    "year": 2017,
+    "month": "March"
+  },
+  {
+    "task_a_theme": "Technology",
+    "task_b_theme": "Politics",
+    "year": 2017,
+    "month": "September"
+  },
+  {
+    "task_a_theme": "Idealism",
+    "task_b_theme": "Family",
+    "year": 2019,
+    "month": "March"
+  },
+  {
+    "task_a_theme": "Justice",
+    "task_b_theme": "Identity",
+    "year": 2020,
+    "month": "May"
+  }
+]
