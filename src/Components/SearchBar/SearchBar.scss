@@ -1,0 +1,22 @@
+@import "../../Styles/main.scss";
+
+.search {
+  text-align: center;
+  margin-bottom: $spacer-small;
+
+  &__input {
+    font-size: $default-4;
+    outline: none;
+    border: 0px solid;
+    padding: $padding-button;
+    border-radius: $round-edges;
+    width: 20rem;
+    margin: 0 auto;
+    background-color: $color-light-blue;
+    color: $color-green;
+
+    &::placeholder {
+      color: $color-green;
+    }
+  }
+}
