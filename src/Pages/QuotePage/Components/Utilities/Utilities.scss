@@ -1,0 +1,41 @@
+@import "../../../../Styles/main.scss";
+
+.utilities {
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+    margin-bottom: $spacer-med;
+    font-size: 0.75rem;
+  }
+
+  &__button {
+    @include button($color-light-blue);
+
+    position: relative;
+    text-transform: uppercase;
+    color: $color-green;
+    font-weight: bolder;
+    margin: 0.5rem 0;
+    text-align: center;
+
+    &__clipboard {
+      font-weight: 400;
+
+      &--active {
+        animation: fade-out-in 1.5s ease-out;
+      }
+    }
+
+    &__copied {
+      @include center-div-absolute;
+      opacity: 0;
+
+      &--active {
+        animation: fade-in-out 1.5s ease-out;
+      }
+    }
+  }
+}
