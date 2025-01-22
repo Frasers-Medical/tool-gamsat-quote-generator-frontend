@@ -88,7 +88,6 @@ const Timer = () => {
     if (playSound && soundEnabled) {
       return (
         <div>
-
           {/*<Sound*/}
           {/*  url={Cowbell}*/}
           {/*  playStatus={Sound.status.PLAYING}*/}

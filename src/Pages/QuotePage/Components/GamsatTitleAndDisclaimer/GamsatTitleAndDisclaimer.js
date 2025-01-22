@@ -26,9 +26,9 @@ const GamsatTitleAndDisclaimer = ({ gamsatTitle }) => {
             prompts presented in the specified Graduate Medical School
             Admissions Test (GAMSAT). They are instead intended to reflect
             similar themes, ideas, and concerns of the prompts of that
-            particular test. This is in line with ACER&apos;s copyright misconduct
-            regulations which protects all GAMSAT material from being reproduced
-            and distributed.
+            particular test. This is in line with ACER&apos;s copyright
+            misconduct regulations which protects all GAMSAT material from being
+            reproduced and distributed.
           </h3>
         </div>
       ) : (
