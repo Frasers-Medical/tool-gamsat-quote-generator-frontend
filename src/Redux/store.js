@@ -4,6 +4,8 @@ import {
   legacy_createStore as createStore,
 } from "redux";
 import rootReducer from "./Reducers";
+
+// TODO: fix redux devtools
 // import { composeWithDevTools } from "redux-devtools-extension";
 import { thunk } from "redux-thunk";
 
