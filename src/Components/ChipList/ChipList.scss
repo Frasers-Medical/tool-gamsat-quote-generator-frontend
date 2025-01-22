@@ -1,0 +1,25 @@
+@import "../../Styles/main.scss";
+
+.chip-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: center;
+  align-content: stretch;
+
+  &__item {
+    @include button($color-green);
+
+    color: $color-text-light;
+    font-size: $default-4;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    text-align: center;
+
+    &--clicked {
+      @include button($color-dark-blue);
+      padding: 0.5rem 1rem;
+    }
+  }
+}
