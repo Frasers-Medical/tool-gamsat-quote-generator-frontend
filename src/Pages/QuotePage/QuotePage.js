@@ -69,7 +69,7 @@ const QuotePage = ({
         {quotes.map((quote, index) => {
           if (breakdowns[index][0] === null && breakdowns[index][1] === null) {
             return (
-              <li className="quotes__item">
+              <li key={index} className="quotes__item">
                 <p>
                   {index + 1}. {quote}
                 </p>
