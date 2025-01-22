@@ -1,0 +1,30 @@
+@import "../../Styles/main.scss";
+
+.pill-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: center;
+  align-content: stretch;
+
+  &__item {
+    @include button($color-green);
+
+    color: $color-text-light;
+    font-size: $default-3;
+    font-weight: 500;
+    margin: 0.5rem;
+    text-align: center;
+
+    &--clicked {
+      @include button($color-dark-blue);
+    }
+  }
+
+  @media only screen and (max-width: $mobile-width) {
+    &__item {
+      font-size: $default-4;
+      margin: 0.25rem 0.25rem;
+    }
+  }
+}
