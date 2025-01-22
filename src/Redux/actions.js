@@ -10,7 +10,7 @@ export const getQuotesAction = (taskATheme, taskBTheme) => {
     dispatch(getQuotesRequest());
     getQuotes(taskATheme, taskBTheme)
       .then((response) => {
-        return response.data;
+        return response;
       })
       .then((responseData) => {
         dispatch(getQuotesSuccess(responseData));
@@ -49,7 +49,7 @@ export const getThemesAction = () => {
     dispatch(getThemesRequest());
     getThemes()
       .then((response) => {
-        return response.data;
+        return response;
       })
       .then((responseData) => {
         dispatch(getThemesSuccess(responseData));
@@ -120,7 +120,7 @@ export const getGamsatThemesAction = () => {
     dispatch(getGamsatThemesRequest());
     getGamsatThemes()
       .then((response) => {
-        return response.data;
+        return response;
       })
       .then((responseData) => {
         dispatch(getGamsatThemesSuccess(responseData));
