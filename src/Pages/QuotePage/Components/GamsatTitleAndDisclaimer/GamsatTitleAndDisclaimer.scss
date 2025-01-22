@@ -1,0 +1,20 @@
+@import "../../Styles/main.scss";
+.gamsat {
+  margin-bottom: $spacer-small;
+
+  &__title {
+    font-size: $heading-4;
+  }
+
+  &__disclaimer {
+    font-size: $default-3;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+
+    &--active {
+      max-height: 35rem;
+      opacity: 1;
+    }
+  }
+}
