@@ -96,8 +96,7 @@ class ComponentToPrint extends React.Component {
           </h2>
           <ul className="quotes__list">
             {taskAQuotes.map((quote, index) => (
-              // eslint-disable-next-line react/jsx-key
-              <li className="quotes__item">
+              <li key={index} className="quotes__item">
                 <p>
                   {index + 1}. {quote}
                 </p>
@@ -115,8 +114,7 @@ class ComponentToPrint extends React.Component {
           </h2>
           <ul className="quotes__list">
             {taskBQuotes.map((quote, index) => (
-              // eslint-disable-next-line react/jsx-key
-              <li className="quotes__item">
+              <li key={index} className="quotes__item">
                 <p>
                   {index + 1}. {quote}
                 </p>
