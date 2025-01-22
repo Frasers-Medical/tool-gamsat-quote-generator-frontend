@@ -1,0 +1,22 @@
+@import "../../../../Styles/main.scss";
+
+.generate-section {
+  background-color: $color-bg-light;
+}
+
+.generate {
+  text-align: center;
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-bottom: $spacer-med;
+
+  &__title {
+    font-size: $heading-4;
+    margin-bottom: $spacer-small;
+    text-transform: uppercase;
+  }
+
+  &__selection-container {
+    @include centered-container;
+  }
+}
