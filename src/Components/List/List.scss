@@ -1,0 +1,21 @@
+@import "../../Styles/main.scss";
+
+.list {
+  &__item {
+    @include button($color-green);
+
+    color: $color-text-light;
+    font-size: $default-3;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+
+    &--clicked {
+      @include button($color-dark-blue);
+
+      background-color: $color-dark-blue;
+    }
+  }
+}
