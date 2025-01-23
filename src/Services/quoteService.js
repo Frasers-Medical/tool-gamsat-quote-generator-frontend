@@ -4,6 +4,10 @@ import apiQuotesGamsat from "../Data/api_quotes_gamsat.json";
 
 export const getQuotes = async (taskATheme, taskBTheme) => {
   console.log("getQuotes", taskATheme, taskBTheme);
+  if(taskATheme && taskBTheme)
+    return apiQuotes.filter(
+      (quote) => quote.themes.theme === taskATheme || quote.themes.theme === taskBTheme
+    )
   return apiQuotes;
 };
 

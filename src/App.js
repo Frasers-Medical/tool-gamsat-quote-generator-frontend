@@ -6,6 +6,7 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import QuotePage from "./Pages/QuotePage/QuotePage";
+
 function App() {
   return (
     <Router>

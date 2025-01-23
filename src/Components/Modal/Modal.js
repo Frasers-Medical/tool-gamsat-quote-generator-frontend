@@ -2,15 +2,14 @@ import React,  { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
 import './Modal.scss';
 import ReactModal from "react-modal";
-import CancelIcon from '@material-ui/icons/Cancel';
+import { Cancel } from "@mui/icons-material";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import PillList from "../../Components/PillList/PillList";
 
 const Modal = ({ data, onItemClick, modalState, setModalState }) => {
   const [filteredData, setFilteredData] = useState(data)
-
+  console.log(filteredData);
   useEffect(() => {
-    ReactModal.setAppElement('body');
     setFilteredData(data)
   }, [data]);
 
@@ -21,14 +20,11 @@ const Modal = ({ data, onItemClick, modalState, setModalState }) => {
   const renderContent = () => {
     return (
       <div>
+        <Cancel onClick={() => setModalState(false)}></Cancel>
         <div className="modal">
-          <div className="modal__top-controls">
-            <CancelIcon onClick={() => setModalState(false)}></CancelIcon>
             <SearchBar data={data} onInputChange={setFilteredData}/>
           </div>
-
           <PillList data={filteredData} onItemClick={handleOnClick}/>
-        </div>
       </div>
     )
   }
