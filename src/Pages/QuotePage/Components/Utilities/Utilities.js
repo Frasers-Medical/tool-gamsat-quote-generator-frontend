@@ -13,9 +13,10 @@ import HiddenButton from "../../../../Components/HiddenButton/HiddenButton";
 const Utilities = ({ taskATheme, taskBTheme, taskAQuotes, taskBQuotes }) => {
   const [copyAnimation, setCopyAnimation] = React.useState(false);
 
-  const componentRef = useRef();
+  const componentRef = useRef(null);
   const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
+    documentTitle: "GAMSAT QUOTE",
+    contentRef: componentRef,
   });
 
   const onCopyToClipboard = () => {
@@ -34,13 +35,46 @@ ${taskBQuotes.map((quote, index) => `${index + 1}. ${quote}\n`)}
   return (
     <div className="utilities">
       <div className="print-component">
-        <ComponentToPrint
-          taskATheme={taskATheme}
-          taskBTheme={taskBTheme}
-          taskAQuotes={taskAQuotes}
-          taskBQuotes={taskBQuotes}
-          ref={componentRef}
-        />
+        <div className="print" ref={componentRef}>
+          <div className="quotes">
+            <h2 className="quotes__title">
+              <HiddenButton
+                titleLabel="Task A"
+                visibleLabel={taskATheme}
+                hiddenLabel=""
+                initialState={1}
+              />
+            </h2>
+
+            <ul className="quotes__list">
+              {taskAQuotes.map((quote, index) => (
+                <li key={index} className="quotes__item">
+                  <p>
+                    {index + 1}. {quote}
+                  </p>
+                </li>
+              ))}
+            </ul>
+
+            <h2 className="quotes__title">
+              <HiddenButton
+                titleLabel="Task B"
+                visibleLabel={taskBTheme}
+                hiddenLabel=""
+                initialState={1}
+              />
+            </h2>
+            <ul className="quotes__list">
+              {taskBQuotes.map((quote, index) => (
+                <li key={index} className="quotes__item">
+                  <p>
+                    {index + 1}. {quote}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
       <div className="utilities__container">
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
@@ -68,64 +102,13 @@ ${taskBQuotes.map((quote, index) => `${index + 1}. ${quote}\n`)}
           </span>
         </div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-        <div className="utilities__button" onClick={handlePrint}>
+        <div className="utilities__button" onClick={() => handlePrint()}>
           Print
         </div>
       </div>
     </div>
   );
 };
-
-class ComponentToPrint extends React.Component {
-  render() {
-    const taskATheme = this.props.taskATheme;
-    const taskBTheme = this.props.taskBTheme;
-    const taskAQuotes = this.props.taskAQuotes;
-    const taskBQuotes = this.props.taskBQuotes;
-
-    return (
-      <div className="print">
-        <div className="quotes">
-          <h2 className="quotes__title">
-            <HiddenButton
-              titleLabel="Task A"
-              visibleLabel={taskATheme}
-              hiddenLabel=""
-              initialState={1}
-            />
-          </h2>
-          <ul className="quotes__list">
-            {taskAQuotes.map((quote, index) => (
-              <li key={index} className="quotes__item">
-                <p>
-                  {index + 1}. {quote}
-                </p>
-              </li>
-            ))}
-          </ul>
-
-          <h2 className="quotes__title">
-            <HiddenButton
-              titleLabel="Task B"
-              visibleLabel={taskBTheme}
-              hiddenLabel=""
-              initialState={1}
-            />
-          </h2>
-          <ul className="quotes__list">
-            {taskBQuotes.map((quote, index) => (
-              <li key={index} className="quotes__item">
-                <p>
-                  {index + 1}. {quote}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    );
-  }
-}
 
 const mapStateToProps = (state) => {
   const taskATheme = getTaskATheme(state);
