@@ -1,0 +1,51 @@
+@import "../../Styles/main.scss";
+
+.quotes-section {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: $color-bg-light;
+}
+
+.print {
+  padding: $padding;
+}
+
+.print-component {
+  height: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.quotes {
+  &__title {
+    font-size: $heading-3;
+    text-transform: uppercase;
+  }
+
+  &__list {
+  }
+
+  &__breakdown {
+    opacity: 0;
+    visibility: hidden;
+    height: 1rem;
+    transition: all 0.5s ease-out;
+
+    &--active {
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    margin-bottom: $spacer-med;
+    font-size: $default-3;
+
+    &--highlight {
+      background-color: yellow;
+    }
+  }
+}
