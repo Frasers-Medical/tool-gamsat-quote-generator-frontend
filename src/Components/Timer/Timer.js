@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import "./Timer.scss";
 
-// TODO: fix sound issue
-// import Sound from "react-sound";
-// module.exports = __webpack_public_path__ + "static/media/cowbell.38e3a153.mp3";
-// import Cowbell from "./cowbell.mp3";
+import Sound from "react-sound";
+import Cowbell from "../../Data/cowbell.mp3";
 
 const Timer = () => {
   const [timeRemaining, setTimeRemaining] = React.useState(6300);
@@ -83,17 +81,17 @@ const Timer = () => {
       e.preventDefault();
     }
   };
-  // TODO: fix sound
+
   const renderSound = () => {
     if (playSound && soundEnabled) {
       return (
         <div>
-          {/*<Sound*/}
-          {/*  url={Cowbell}*/}
-          {/*  playStatus={Sound.status.PLAYING}*/}
-          {/*  playFromPosition={0}*/}
-          {/*  onFinishedPlaying={() => setPlaySound(false)}*/}
-          {/*/>*/}
+          <Sound
+            url={Cowbell}
+            playStatus={Sound.status.PLAYING}
+            playFromPosition={0}
+            onFinishedPlaying={() => setPlaySound(false)}
+          />
         </div>
       );
     } else {
