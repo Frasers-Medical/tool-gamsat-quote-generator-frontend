@@ -69,7 +69,7 @@ const QuotePage = ({
         {quotes.map((quote, index) => {
           if (breakdowns[index][0] === null && breakdowns[index][1] === null) {
             return (
-              <li key={index} className="quotes__item">
+              <li key={index + 1} className="quotes__item">
                 <p>
                   {index + 1}. {quote}
                 </p>
@@ -77,7 +77,7 @@ const QuotePage = ({
             );
           } else {
             return (
-              <li className="quotes__item">
+              <li key={index + 1} className="quotes__item">
                 <p>
                   {index + 1}. {quote.substring(0, breakdowns[index][0])}
                   <span className="quotes__item--highlight">
