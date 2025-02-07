@@ -35,7 +35,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +59,8 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^10.0.1",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.4.2"
-  }
+  },
+  "homepage": "https://github.com/Frasers-Medical/tool-gamsat-quote-generator-frontend"
 }
