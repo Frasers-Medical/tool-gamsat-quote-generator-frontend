@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Timer.scss";
-
-import Sound from "react-sound";
+// TODO: fix timer sound
+// import Sound from "react-sound";
 import Cowbell from "../../Data/cowbell.mp3";
 
 const Timer = () => {
@@ -86,13 +86,14 @@ const Timer = () => {
     if (playSound && soundEnabled) {
       return (
         <div>
-          <Sound
+          {/* TODO: fix timer sound */}
+          {/* <Sound
             url={Cowbell}
             playStatus={Sound.status.PLAYING}
             playFromPosition={0}
             onFinishedPlaying={() => setPlaySound(false)}
-          />
-        </div>
+          />*/}
+        </div> 
       );
     } else {
       return <div></div>;
