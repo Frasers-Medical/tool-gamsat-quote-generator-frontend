@@ -1,32 +1,12 @@
-import apiQuotes from "../Data/api_quotes.json";
-import apiQuotesThemes from "../Data/api_quotes_themes.json";
-import apiQuotesGamsat from "../Data/api_quotes_gamsat.json";
+import { APIClient } from "./apiClient";
 
-export const getQuotes = async (taskATheme, taskBTheme) => {
-  if(taskATheme && taskBTheme)
-    return apiQuotes.filter(
-      (quote) => quote.themes.theme === taskATheme || quote.themes.theme === taskBTheme
-    )
-  return apiQuotes;
-};
+const get = (path) => APIClient.get(path);
+const post = (path, data = {}) => APIClient.post(path, data);
+const patch = (path, data = {}) => APIClient.patch(path, data);
 
-export const getThemes = async () => {
-  try {
-    // eslint-disable-next-line import/no-unresolved
-    return apiQuotesThemes;
-  } catch (error) {
-    console.error("Error fetching themes:", error);
-    throw error;
-  }
-};
-
-export const getGamsatThemes = async () => {
-  try {
-    // eslint-disable-next-line import/no-unresolved
-    console.log(apiQuotesGamsat);
-    return apiQuotesGamsat;
-  } catch (error) {
-    console.error("Error fetching themes:", error);
-    throw error;
-  }
-};
+export const getQuotes = (taskATheme, taskBTheme) =>
+  get(
+    `/api/quotes?${taskATheme ? `task_a_theme=${taskATheme}` : ""}&${taskBTheme ? `task_b_theme=${taskBTheme}` : ""}`,
+  );
+export const getThemes = () => get(`/api/quotes/themes`);
+export const getGamsatThemes = () => get(`/api/quotes/gamsat`);
