@@ -4,7 +4,10 @@ import "./GenerationSelection.scss";
 import { useNavigate } from "react-router-dom";
 import List from "../../../../Components/List/List";
 
-const GenerationSelection = ({ onThemeButton, onGamsatButton }) => {
+const GenerationSelection = ({
+  onThemeButton = () => {},
+  onGamsatButton = () => {},
+}) => {
   const navigate = useNavigate();
 
   const onItemClick = (index) => {
@@ -40,11 +43,6 @@ const GenerationSelection = ({ onThemeButton, onGamsatButton }) => {
 GenerationSelection.propTypes = {
   onThemeButton: PropTypes.func,
   onGamsatButton: PropTypes.func,
-};
-
-// todo: delete unsued defaultProps
-GenerationSelection.defaultProps = {
-  data: [],
 };
 
 export default GenerationSelection;

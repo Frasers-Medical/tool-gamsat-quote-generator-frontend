@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./List.scss";
 
-const List = ({ data, onItemClick }) => {
+const List = ({ data = [], onItemClick = (index) => index }) => {
   const [clickedState, setClickedState] = React.useState(-1);
 
   return (
@@ -38,9 +38,9 @@ List.propTypes = {
   onItemClick: PropTypes.func,
 };
 
-List.defaultProps = {
-  data: [],
-  onItemClick: (index) => index,
-};
+// List.defaultProps = {
+//   data: [],
+//   onItemClick: (index) => index,
+// };
 
 export default List;

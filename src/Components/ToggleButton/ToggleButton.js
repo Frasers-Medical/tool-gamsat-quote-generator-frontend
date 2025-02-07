@@ -2,7 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./ToggleButton.scss";
 
-const ToggleButton = ({ label, toggleState, setToggleState }) => {
+const ToggleButton = ({
+  label = "default",
+  toggleState = false,
+  setToggleState = () => {},
+}) => {
   const handleToggleState = () => {
     setToggleState();
   };
@@ -37,10 +41,6 @@ const ToggleButton = ({ label, toggleState, setToggleState }) => {
 
 ToggleButton.propTypes = {
   label: PropTypes.string,
-};
-
-ToggleButton.defaultProps = {
-  label: "default",
 };
 
 export default ToggleButton;

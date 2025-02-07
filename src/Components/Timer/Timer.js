@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Timer.scss";
 // TODO: fix timer sound
 // import Sound from "react-sound";
-import Cowbell from "../../Data/cowbell.mp3";
+// import Cowbell from "../../Data/cowbell.mp3";
 
 const Timer = () => {
   const [timeRemaining, setTimeRemaining] = React.useState(6300);
@@ -93,7 +93,7 @@ const Timer = () => {
             playFromPosition={0}
             onFinishedPlaying={() => setPlaySound(false)}
           />*/}
-        </div> 
+        </div>
       );
     } else {
       return <div></div>;
