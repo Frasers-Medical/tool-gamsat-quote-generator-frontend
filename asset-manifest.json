@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tool-gamsat-quote-generator-frontend/static/css/main.b1c708c7.css",
+    "main.js": "/tool-gamsat-quote-generator-frontend/static/js/main.4bfec1a4.js",
+    "index.html": "/tool-gamsat-quote-generator-frontend/index.html",
+    "main.b1c708c7.css.map": "/tool-gamsat-quote-generator-frontend/static/css/main.b1c708c7.css.map",
+    "main.4bfec1a4.js.map": "/tool-gamsat-quote-generator-frontend/static/js/main.4bfec1a4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1c708c7.css",
+    "static/js/main.4bfec1a4.js"
+  ]
+}
