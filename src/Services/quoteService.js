@@ -1,6 +1,7 @@
 import { APIClient } from "./apiClient";
 
-const get = (path) => APIClient.get(path);
+const get = (path) => APIClient.get(path).then((response) => response.data);
+
 // const post = (path, data = {}) => APIClient.post(path, data);
 // const patch = (path, data = {}) => APIClient.patch(path, data);
 
